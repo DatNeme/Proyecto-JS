@@ -10,6 +10,7 @@ class Auto {
 class Pantalla {
   nuevoItem(nuevoAuto){
    const listaPartes = document.getElementById('lista');
+
    const elemento = document.createElement('div');
    elemento.innerHTML = `
    <div class="card text-center mb-4">
@@ -34,6 +35,15 @@ class Pantalla {
   eliminarItem(eliminar){
     if (eliminar.name === 'borrar') {
       eliminar.parentElement.parentElement.remove();
+      Swal.fire({
+        text: "Elemento eliminado",
+        icon: 'error',
+        backdrop: 'true',
+        timer: 2500,
+        timerProgressBar: 'true',
+        position: 'top',
+        width: '40%',
+      }) 
     }
   }
 
@@ -48,6 +58,29 @@ document.getElementById('formulario')
     const modelo = document.getElementById('modelo').value;
     const year = document.getElementById('year').value;
     const color = document.getElementById('color').value;
+
+    if (marca == '' || modelo == '' || year == '' || color == '') {
+      return Swal.fire({
+        title:'Error',
+        text: 'Revise que los valores ingresados sean correctos',
+        icon: 'error',
+        backdrop: 'true',
+        timer: 2500,
+        timerProgressBar: 'true',
+        position: 'top',
+        width: '40%',
+      });
+    } else {
+      Swal.fire({
+        text: 'Elemento agregado al stock',
+        icon: 'success',
+        backdrop: 'true',
+        timer: 2500,
+        timerProgressBar: 'true',
+        position: 'top',
+        width: '40%',
+      });
+    }
 
     const nuevoAuto = new Auto (marca, modelo, year, color);
 
