@@ -46,10 +46,6 @@ class Pantalla {
       }) 
     }
   }
-
-  alertItem(){
-
-  }
 }
 
 document.getElementById('formulario')
@@ -95,3 +91,4 @@ document.getElementById('lista').addEventListener('click', function (e) {
   const eliminar = new Pantalla();
   eliminar.eliminarItem(e.target);
  });
+
