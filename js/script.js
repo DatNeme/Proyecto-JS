@@ -37,7 +37,7 @@ class Pantalla {
       eliminar.parentElement.parentElement.remove();
       Swal.fire({
         text: "Elemento eliminado",
-        icon: 'error',
+        icon: 'info',
         backdrop: 'true',
         timer: 2500,
         timerProgressBar: 'true',
