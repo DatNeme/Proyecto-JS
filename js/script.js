@@ -15,10 +15,10 @@ class Pantalla {
     elemento.innerHTML = `
    <div class="card text-center mb-4">
       <div class="card-body">
-        <strong>Marca</strong>: ${nuevoAuto.marca}
-        <strong>Modelo</strong>: ${nuevoAuto.modelo}
-        <strong>Año</strong>: ${nuevoAuto.year}
-        <strong>Color</strong>: ${nuevoAuto.color}
+          <strong>Marca</strong>: ${nuevoAuto.marca}
+          <strong>Modelo</strong>: ${nuevoAuto.modelo}
+          <strong>Año</strong>: ${nuevoAuto.year}
+          <strong>Color</strong>: ${nuevoAuto.color}
         <a href="#" class="btn btn-danger" name="borrar">Quitar</a>
       </div>
    </div>
@@ -63,16 +63,6 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
       position: "top",
       width: "40%",
     });
-  } else {
-    Swal.fire({
-      text: "Elemento agregado al stock",
-      icon: "success",
-      backdrop: "true",
-      timer: 2500,
-      timerProgressBar: "true",
-      position: "top",
-      width: "40%",
-    });
   }
 
   const nuevoAuto = new Auto(marca, modelo, year, color);
@@ -88,3 +78,17 @@ document.getElementById("lista").addEventListener("click", function (e) {
   const eliminar = new Pantalla();
   eliminar.eliminarItem(e.target);
 });
+
+$('h1').css('color', '#ffffff');
+$('input.btn').css('background-color', '#73C3D9',);
+$('#boton').click(()=>{
+  Swal.fire({
+    text: "Elemento agregado al stock",
+    icon: "success",
+    backdrop: "true",
+    timer: 2500,
+    timerProgressBar: "true",
+    position: "top",
+    width: "40%",
+  });
+})
