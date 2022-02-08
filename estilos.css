@@ -1,18 +1,18 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-body{
-padding: 10px;
-min-height: 100vh;
+body {
+  padding: 10px;
+  min-height: 100vh;
 }
 
-.submit{
-    margin-top: 5px;
+.submit {
+  margin-top: 5px;
 }
 
-h2{
-    font-size: 2rem;
+h2 {
+  font-size: 2rem;
 }
