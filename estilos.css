@@ -16,3 +16,13 @@ body {
 h2 {
   font-size: 2rem;
 }
+
+#btnAnim {
+  background-color: #73c3d9;
+  color: black;
+}
+
+#elemAnim {
+  display: flex;
+  margin-left: 25vw;
+}

@@ -83,13 +83,29 @@ $(() => {
   });
 
   $("h1").css("color", "#ffffff");
-  $("input.btn").css("background-color", "#73C3D9");
+  $("input.btn").css({ "background-color": "#73C3D9", color: "black" });
   $("#boton").click(() => {
     Swal.fire({
       text: "Elemento agregado al stock",
       icon: "success",
       backdrop: "true",
       timer: 2500,
+      timerProgressBar: "true",
+      position: "top",
+      width: "40%",
+    });
+  });
+
+  $("#elemAnim").append(
+    `<button id="btnAnim" class="btn btn-outline-dark">Mostrar/Ocultar</button>`
+  );
+  $("#btnAnim").click(() => {
+    $("#lista").slideToggle();
+    Swal.fire({
+      text: "Se cambió el estado de la lista",
+      icon: "info",
+      backdrop: "true",
+      timer: 1100,
       timerProgressBar: "true",
       position: "top",
       width: "40%",
