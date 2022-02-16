@@ -17,12 +17,27 @@ h2 {
   font-size: 2rem;
 }
 
-#btnAnim {
+#btnAnim, #import {
   background-color: #73c3d9;
   color: black;
+  margin: 3px;
 }
 
 #elemAnim {
   display: flex;
-  margin-left: 25vw;
+  margin-left: 18vw;
+}
+
+#personas {
+margin-top: 10vh;
+color: rgb(159, 172, 184);
+}
+
+table, th, td{
+  border: 1px solid;
+  text-align: center;
+  padding: 2px;
+}
+tr:hover{
+  background-color: rgb(39, 44, 48);
 }

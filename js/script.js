@@ -105,10 +105,29 @@ $(() => {
       text: "Se cambió el estado de la lista",
       icon: "info",
       backdrop: "true",
-      timer: 1100,
+      timer: 1250,
       timerProgressBar: "true",
-      position: "top",
-      width: "40%",
+      position: "top-end",
+      toast: "true",
+    });
+  });
+
+  $("#personas").hide();
+  $("#import").click(function () {
+    $.ajax({
+      type: "GET",
+      url: "https://randomuser.me/api/?nat=es",
+      dataType: "json",
+    }).done((data) => {
+      let personas = data.results;
+      $.each(personas, function (indice, persona) {
+        let fila = $("<tr>");
+        fila.append($(`<td> ${persona.name.first} </td>`));
+        fila.append($(`<td> ${persona.name.last} </td>`));
+        fila.append($(`<td> ${persona.location.state} </td>`));
+        $("#personas tbody").append(fila);
+      });
+      $('#personas').show();
     });
   });
 });
