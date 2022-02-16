@@ -104,7 +104,6 @@ $(() => {
     Swal.fire({
       text: "Se cambió el estado de la lista",
       icon: "info",
-      backdrop: "true",
       timer: 1250,
       timerProgressBar: "true",
       position: "top-end",
