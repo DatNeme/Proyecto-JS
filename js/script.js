@@ -8,7 +8,7 @@ $(() => {
       this.color = color;
     }
   }
-  ////////////////////////////////////////////////////////////////////////
+  
 
 
   ///////////////////CONSTRUCTOR DE LA LISTA DE OBJETOS///////////////////
@@ -50,7 +50,7 @@ $(() => {
       }
     }
   }
-  ////////////////////////////////////////////////////////////////////////
+
 
 
   ///////////////////RECOLECCIÓN Y COMPROBACIÓN DE DATOS//////////////////
@@ -75,15 +75,26 @@ $(() => {
         });
       }
 
-      const nuevoAuto = new Auto(marca, modelo, year, color);
+      nuevoAuto = new Auto(marca, modelo, year, color);
+      
 
       const nuevosDatos = new Pantalla();
       nuevosDatos.nuevoItem(nuevoAuto);
       nuevosDatos.limpiarForm();
+      agregar();      
 
       e.preventDefault();
     });
-  ////////////////////////////////////////////////////////////////////////
+  
+  
+
+  ///////////////////ARRAY DE AUTOS AGREGADOS/////////////////////////////
+  var arrayAutos = [];
+  function agregar(){
+    arrayAutos.push(nuevoAuto);
+    console.log(arrayAutos);
+  };
+  
 
 
   ///////////////////CAPTURA DEL EVENTO PARA ELIMINAR OBJETOS/////////////
@@ -91,7 +102,7 @@ $(() => {
     const eliminar = new Pantalla();
     eliminar.eliminarItem(e.target);
   });
-  ////////////////////////////////////////////////////////////////////////
+  
 
 
   ///////////////////JQUERY, AJAX, API Y JSON/////////////////////////////
