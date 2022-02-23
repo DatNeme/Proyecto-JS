@@ -1,4 +1,5 @@
 $(() => {
+  ///////////////////CONSTRUCTOR INICIAL DEL OBJETO///////////////////////
   class Auto {
     constructor(marca, modelo, year, color) {
       this.marca = marca;
@@ -7,7 +8,10 @@ $(() => {
       this.color = color;
     }
   }
+  ////////////////////////////////////////////////////////////////////////
 
+
+  ///////////////////CONSTRUCTOR DE LA LISTA DE OBJETOS///////////////////
   class Pantalla {
     nuevoItem(nuevoAuto) {
       const listaPartes = document.getElementById("lista");
@@ -46,7 +50,10 @@ $(() => {
       }
     }
   }
+  ////////////////////////////////////////////////////////////////////////
 
+
+  ///////////////////RECOLECCIÓN Y COMPROBACIÓN DE DATOS//////////////////
   document
     .getElementById("formulario")
     .addEventListener("submit", function (e) {
@@ -76,12 +83,18 @@ $(() => {
 
       e.preventDefault();
     });
+  ////////////////////////////////////////////////////////////////////////
 
+
+  ///////////////////CAPTURA DEL EVENTO PARA ELIMINAR OBJETOS/////////////
   document.getElementById("lista").addEventListener("click", function (e) {
     const eliminar = new Pantalla();
     eliminar.eliminarItem(e.target);
   });
+  ////////////////////////////////////////////////////////////////////////
 
+
+  ///////////////////JQUERY, AJAX, API Y JSON/////////////////////////////
   $("h1").css("color", "#ffffff");
   $("input.btn").css({ "background-color": "#73C3D9", color: "black" });
   $("#boton").click(() => {
